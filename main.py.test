@@ -1,0 +1,25 @@
+from stats import num_of_words, num_of_char, sorted_char
+
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
+
+def main(relative):
+    book_text = get_book_text(relative)
+    num_words = num_of_words(book_text)
+    num_chars = num_of_char(book_text)
+ 
+    print(f"""
+============ BOOKBOT ============")
+Analyzing book found at {book_path}...
+----------- Word Count ----------
+Found {num_words} total words
+--------- Character Count -------
+""")
+    sorted_char(num_chars)
+
+
+book_path = "books/frankenstein.txt"
+main(book_path)
+
+

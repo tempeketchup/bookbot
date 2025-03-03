@@ -1,0 +1,19 @@
+def num_of_words(text):
+    return len(text.split())
+
+def num_of_char(text):
+    text = text.lower()
+    char_counts = {}
+    
+    for c in text:
+        if c not in char_counts:
+            char_counts[c] = 1
+        else:
+            char_counts[c] += 1
+    return char_counts
+
+def sorted_char(num_char):
+    sc = sorted(num_char.items(), key=lambda item: item[1], reverse=True)
+    for a, b in sc:
+        print(f"{a}: {b}")
+
